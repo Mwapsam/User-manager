@@ -1,2 +1,20 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+        <% if current_user%>
+            <!>You are successfully logged in!</h1>
+        <% else %>
+            <h1>Welcome to the Sample App!</h1>
+            <p>
+                This is a sample application for the book "Rails 4 Web Development"
+                by Michael Hartl.
+            </p>
+            <p>
+                Please sign in or sign up.
+                <%= link_to 'Sign up', new_user_registration_path %>
+                <%= link_to 'Sign in', user_session_path %>
+            </p>
+        <% end %>
+        </div>
+    </div>
+</div>
